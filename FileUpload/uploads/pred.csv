@@ -1,6 +1,0 @@
-﻿,vehicle_id,timestamp,location_lat,location_lon,engine_status,fuel_level,time_diff,fuel_drop,lat_change,lon_change,is_moving,engine_status_flag,siphonage
-2,V1,2025-03-25T08:30:00.000,1.2921,36.8219,OFF,72,15,-6,0,0,0,0,Yes
-7,V2,2025-03-25T08:20:00.000,-1.2921,36.8219,OFF,85,10,-5,0,0,0,0,Yes
-11,V3,2025-03-25T08:20:00.000,-1.2921,36.8219,OFF,57,10,-3,0,0,0,0,Yes
-15,V4,2025-03-25T08:20:00.000,-1.2921,35.9,OFF,87,10,-3,0,0,0,0,Yes
-16,V4,2025-03-25T08:30:00.000,-1.2921,35.9,OFF,80,10,-7,0,0,0,0,Yes
