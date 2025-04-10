@@ -19,6 +19,7 @@ class FileUploader(models.Model):
     #Naming the fields in the model
     upload_id = models.UUIDField(default=uuid.uuid4, unique=True, editable=False)
     file_name = models.CharField(max_length=100)
+    owner = models.ForeignKey('auth.User', related_name='FileUploader', on_delete=models.CASCADE)
     file = models.FileField(upload_to='uploads/', validators=[FileValidator], help_text='Please enter CSV files only')
     upload_date = models.DateTimeField(default=timezone.now)
     upload_description = models.TextField(null=True, blank=True)

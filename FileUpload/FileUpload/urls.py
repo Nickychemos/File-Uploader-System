@@ -15,13 +15,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from FileUploader.views import GetFileUploadAPIViews, DelFileUploadAPIViews, AddFileUploaderAPIViews, DetailsFileUploadAPIView
+from FileUploader.views import UserListViews, UserDetails
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('login/', include('rest_framework.urls')),
     path('get-upload/', GetFileUploadAPIViews.as_view(), name='GetFileUploadAPIViews'),
     path('delete-upload/', DelFileUploadAPIViews.as_view(), name='DelFileUploadAPIViews'),
-    path('add-upload/', AddFileUploaderAPIViews.as_view(), name='AddFileUploaderAPIViews'),
+    path('post-upload/', AddFileUploaderAPIViews.as_view(), name='AddFileUploaderAPIViews'),
     path('upload-details/', DetailsFileUploadAPIView.as_view(), name='DetailsFileUploadAPIView'),
+    path('upload-users/', UserListViews.as_view(), name = 'Users'),
+    path('upload-details/', UserDetails.as_view(), name = 'UserDetails')
 ]
